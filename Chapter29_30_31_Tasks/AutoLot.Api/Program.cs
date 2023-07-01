@@ -1,20 +1,20 @@
 using Microsoft.AspNetCore.Hosting;
-
 using Microsoft.AspNetCore.Builder;
 using AutoLot.Api;
+using AutoLot.Services.Logging;
 
-var builder = WebApplication.CreateBuilder(args);
 
-var startup = new Startup(builder.Configuration);
-
-startup.ConfigureServices(builder.Services);
+var builder = CreateHostBuilder(args);
 
 var app = builder.Build();
 
-startup.Configure(app, app.Environment);
-
 app.Run();
 
+static IHostBuilder CreateHostBuilder(string[] args) => Host.CreateDefaultBuilder(args)
+    .ConfigureWebHostDefaults(webBuilder =>
+    {
+        webBuilder.UseStartup<Startup>();
+    }).ConfigureSerilog();
 
 
 
@@ -44,13 +44,3 @@ app.Run();
 
 //app.Run();
 
-// static void Main(string[] args)
-//{
-//    CreateHostBuilder(args).Build().Run();
-//}
-///*public*/ static IHostBuilder CreateHostBuilder(string[] args) =>
-//Host.CreateDefaultBuilder(args)
-//.ConfigureWebHostDefaults(webBuilder =>
-//{
-//    webBuilder.UseStartup<Startup>();
-//});

@@ -1,7 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
-using AutoLot.Services.Logging;
 
-namespace AutoLot.Api.Controllers
+namespace WebApplication2.Controllers
 {
     [ApiController]
     [Route("[controller]")]
@@ -9,12 +8,12 @@ namespace AutoLot.Api.Controllers
     {
         private static readonly string[] Summaries = new[]
         {
-            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-        };
+        "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
+    };
 
-        private readonly IAppLogging<WeatherForecastController> _logger;
+        private readonly ILogger<WeatherForecastController> _logger;
 
-        public WeatherForecastController(IAppLogging<WeatherForecastController> logger)
+        public WeatherForecastController(ILogger<WeatherForecastController> logger)
         {
             _logger = logger;
         }
@@ -22,8 +21,6 @@ namespace AutoLot.Api.Controllers
         [HttpGet(Name = "GetWeatherForecast")]
         public IEnumerable<WeatherForecast> Get()
         {
-            _logger.LogAppWarning("This is a test");
-            throw new Exception("Test Exception");
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateTime.Now.AddDays(index),
