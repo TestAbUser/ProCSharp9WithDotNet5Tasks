@@ -4,6 +4,8 @@ using AutoLot.Dal.Repos;
 using AutoLot.Dal.Repos.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using AutoLot.Services.Logging;
+using Microsoft.AspNetCore.Mvc.Infrastructure;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 
 namespace AutoLot.MVC
 {
@@ -25,6 +27,7 @@ namespace AutoLot.MVC
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.TryAddSingleton<IActionContextAccessor, ActionContextAccessor>();
             services.AddControllersWithViews();
             var connectionString = Configuration.GetConnectionString("AutoLot");
             services.AddDbContextPool<ApplicationDbContext>(
