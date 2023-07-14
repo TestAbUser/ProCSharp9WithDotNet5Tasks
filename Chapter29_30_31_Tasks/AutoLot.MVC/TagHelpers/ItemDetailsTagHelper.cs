@@ -16,7 +16,7 @@ namespace AutoLot.Mvc.TagHelpers
 
         public override void Process(TagHelperContext context, TagHelperOutput output)
         {
-            BuildContent(output, nameof(CarsController.Details), "text-info", "Details", "info-circle");
+            BuildContent(output, nameof(CarsDalController.Details), "text-info", "Details", "info-circle");
         }
     }
 }

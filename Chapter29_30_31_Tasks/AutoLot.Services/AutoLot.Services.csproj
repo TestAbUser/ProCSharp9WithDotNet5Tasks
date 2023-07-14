@@ -21,7 +21,6 @@
   <ItemGroup>
     <ProjectReference Include="..\AutoLot.Dal\AutoLot.Dal.csproj" />
     <ProjectReference Include="..\AutoLot.Models\AutoLot.Models.csproj" />
-    <ProjectReference Include="..\AutoLot.Models\AutoLot.MVC.csproj" />
   </ItemGroup>
 
 </Project>

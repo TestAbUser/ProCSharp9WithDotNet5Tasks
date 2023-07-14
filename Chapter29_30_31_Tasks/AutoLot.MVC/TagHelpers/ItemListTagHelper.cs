@@ -13,7 +13,7 @@ namespace AutoLot.Mvc.TagHelpers
 
         public override void Process(TagHelperContext context, TagHelperOutput output)
         {
-            BuildContent(output, nameof(CarsController.Index), "text-default", "Back to List", "list");
+            BuildContent(output, nameof(CarsDalController.Index), "text-default", "Back to List", "list");
         }
     }
 }

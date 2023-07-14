@@ -14,7 +14,7 @@ namespace AutoLot.Mvc.TagHelpers
 
         public override void Process(TagHelperContext context, TagHelperOutput output)
         {
-            BuildContent(output, nameof(CarsController.Delete), "text-danger", "Delete", "trash");
+            BuildContent(output, nameof(CarsDalController.Delete), "text-danger", "Delete", "trash");
         }
     }
 }

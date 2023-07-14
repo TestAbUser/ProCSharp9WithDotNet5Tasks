@@ -6,15 +6,17 @@ using Microsoft.EntityFrameworkCore;
 using AutoLot.Services.Logging;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.Extensions.DependencyInjection.Extensions;
+using AutoLot.MVC.Models;
+using AutoLot.Services.ApiWrapper;
 
 namespace AutoLot.MVC
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
-        {
-            Configuration = configuration;
-        }
+        //public Startup(IConfiguration configuration)
+        //{
+        //    Configuration = configuration;
+        //}
 
         private readonly IWebHostEnvironment _env;
         public Startup(IConfiguration configuration, IWebHostEnvironment env)
@@ -39,7 +41,24 @@ namespace AutoLot.MVC
             services.AddScoped<IMakeRepo, MakeRepo>();
             services.AddScoped<IOrderRepo, OrderRepo>();
             services.AddScoped(typeof(IAppLogging<>), typeof(AppLogging<>));
-            // services.AddRazorPages();
+
+            if (_env.IsDevelopment() || _env.IsEnvironment("Local"))
+            {
+                services.AddWebOptimizer(false, false);
+            }
+            else
+            {
+                services.AddWebOptimizer(options =>
+                {
+                    options.MinifyCssFiles(); //Minifies all CSS files
+                                              //options.MinifyJsFiles(); //Minifies all JS files
+                    options.MinifyJsFiles("js/site.js");
+                    options.MinifyJsFiles("lib/**/*.js");
+                });
+            }
+
+            services.Configure<DealerInfo>(Configuration.GetSection(nameof(DealerInfo)));
+            services.ConfigureApiServiceWrapper(Configuration);
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ApplicationDbContext context)
@@ -63,6 +82,7 @@ namespace AutoLot.MVC
                 app.UseHsts();
             }
             app.UseHttpsRedirection();
+            app.UseWebOptimizer();
             app.UseStaticFiles();
             app.UseRouting();
             app.UseAuthorization();
@@ -75,23 +95,5 @@ namespace AutoLot.MVC
             });
 
         }
-
-        //public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
-        //{
-        //    if (!env.IsDevelopment())
-        //    {
-        //        app.UseExceptionHandler("/Error");
-        //        app.UseHsts();
-        //    }
-
-        //    app.UseHttpsRedirection();
-        //    app.UseStaticFiles();
-        //    app.UseRouting();
-
-        //    app.UseEndpoints(endpoints =>
-        //    {
-        //        endpoints.MapRazorPages();
-        //    });
-        //}
     }
 }

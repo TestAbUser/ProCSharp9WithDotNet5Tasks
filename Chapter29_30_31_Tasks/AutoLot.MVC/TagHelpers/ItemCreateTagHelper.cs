@@ -13,7 +13,7 @@ namespace AutoLot.Mvc.TagHelpers
 
         public override void Process(TagHelperContext context, TagHelperOutput output)
         {
-            BuildContent(output, nameof(CarsController.Create), "text-success", "Create new", "plus");
+            BuildContent(output, nameof(CarsDalController.Create), "text-success", "Create new", "plus");
         }
     }
 }

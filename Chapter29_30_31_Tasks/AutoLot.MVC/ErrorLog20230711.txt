@@ -1,0 +1,78 @@
+[23-07-11 17:19:29 Warning]:Microsoft.EntityFrameworkCore.Model.Validation
+
+            Message:The 'bool' property '"IsDrivable"' on entity type '"Car"' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead, so that the default will only be used for inserts when the property value is 'null'.
+in method  at :
+
+            
+[23-07-11 17:19:30 Warning]AutoLot.MVC - Dev:MVC.Controllers.HomeController
+
+            Message:This is a test
+in method Index at C:\Users\IsaRu\source\repos\ProCSharp9WithDotNet5Tasks\Chapter29_30_31_Tasks\AutoLot.MVC\Controllers\HomeController.cs:25
+
+            
+[23-07-11 17:20:35 Warning]:Microsoft.EntityFrameworkCore.Model.Validation
+
+            Message:The 'bool' property '"IsDrivable"' on entity type '"Car"' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead, so that the default will only be used for inserts when the property value is 'null'.
+in method  at :
+
+            
+[23-07-11 17:20:35 Warning]AutoLot.MVC - Dev:MVC.Controllers.HomeController
+
+            Message:This is a test
+in method Index at C:\Users\IsaRu\source\repos\ProCSharp9WithDotNet5Tasks\Chapter29_30_31_Tasks\AutoLot.MVC\Controllers\HomeController.cs:25
+
+            
+[23-07-11 17:20:47 Warning]AutoLot.MVC - Dev:MVC.Controllers.HomeController
+
+            Message:This is a test
+in method Index at C:\Users\IsaRu\source\repos\ProCSharp9WithDotNet5Tasks\Chapter29_30_31_Tasks\AutoLot.MVC\Controllers\HomeController.cs:25
+
+            
+[23-07-11 17:24:21 Warning]:Microsoft.EntityFrameworkCore.Model.Validation
+
+            Message:The 'bool' property '"IsDrivable"' on entity type '"Car"' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead, so that the default will only be used for inserts when the property value is 'null'.
+in method  at :
+
+            
+[23-07-11 17:24:22 Warning]AutoLot.MVC - Dev:MVC.Controllers.HomeController
+
+            Message:This is a test
+in method Index at C:\Users\IsaRu\source\repos\ProCSharp9WithDotNet5Tasks\Chapter29_30_31_Tasks\AutoLot.MVC\Controllers\HomeController.cs:25
+
+            
+[23-07-11 17:24:44 Warning]:Microsoft.EntityFrameworkCore.Model.Validation
+
+            Message:The 'bool' property '"IsDrivable"' on entity type '"Car"' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead, so that the default will only be used for inserts when the property value is 'null'.
+in method  at :
+
+            
+[23-07-11 17:24:45 Warning]AutoLot.MVC - Dev:MVC.Controllers.HomeController
+
+            Message:This is a test
+in method Index at C:\Users\IsaRu\source\repos\ProCSharp9WithDotNet5Tasks\Chapter29_30_31_Tasks\AutoLot.MVC\Controllers\HomeController.cs:25
+
+            
+[23-07-11 17:25:34 Warning]:Microsoft.EntityFrameworkCore.Model.Validation
+
+            Message:The 'bool' property '"IsDrivable"' on entity type '"Car"' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead, so that the default will only be used for inserts when the property value is 'null'.
+in method  at :
+
+            
+[23-07-11 17:25:34 Warning]AutoLot.MVC - Dev:MVC.Controllers.HomeController
+
+            Message:This is a test
+in method Index at C:\Users\IsaRu\source\repos\ProCSharp9WithDotNet5Tasks\Chapter29_30_31_Tasks\AutoLot.MVC\Controllers\HomeController.cs:25
+
+            
+[23-07-11 17:27:27 Warning]:Microsoft.EntityFrameworkCore.Model.Validation
+
+            Message:The 'bool' property '"IsDrivable"' on entity type '"Car"' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead, so that the default will only be used for inserts when the property value is 'null'.
+in method  at :
+
+            
+[23-07-11 17:27:28 Warning]AutoLot.MVC - Dev:MVC.Controllers.HomeController
+
+            Message:This is a test
+in method Index at C:\Users\IsaRu\source\repos\ProCSharp9WithDotNet5Tasks\Chapter29_30_31_Tasks\AutoLot.MVC\Controllers\HomeController.cs:25
+
+            

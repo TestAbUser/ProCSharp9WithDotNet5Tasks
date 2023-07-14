@@ -24,8 +24,8 @@ namespace AutoLot.MVC.TagHelpers.Base
         {
             output.TagName = "a"; // Replaces <item-list> with <a> tag
             var target = ItemId.HasValue
-            ? UrlHelper.Action(actionName, nameof(CarsController).RemoveController(), new { id = ItemId })
-            : UrlHelper.Action(actionName, nameof(CarsController).RemoveController());
+            ? UrlHelper.Action(actionName, nameof(CarsDalController).RemoveController(), new { id = ItemId })
+            : UrlHelper.Action(actionName, nameof(CarsDalController).RemoveController());
             output.Attributes.SetAttribute("href", target);
             output.Attributes.Add("class", className);
             output.Content.AppendHtml($@"{displayText} <i class=""fas fa-{fontAwesomeName}""></i>");

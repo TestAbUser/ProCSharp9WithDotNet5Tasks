@@ -7,10 +7,16 @@
 <div class="row">
     <div class="col-md-4">
         <form asp-controller="Cars" asp-action="Create">
-            <button type="submit" asp-action="Create">Index</button>
-            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="RazorSyntax">
-                Razor Syntax
-            </a>
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            @Html.EditorForModel()
+            <div class="form-group">
+                <button type="submit" class="btn btn-success">Create 
+                    <i class="fas fa-plus"></i></button>&nbsp;&nbsp;|&nbsp;&nbsp;
+                <item-list></item-list>
+            </div>
         </form>
     </div>
 </div>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

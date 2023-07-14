@@ -3,6 +3,8 @@ using MVC.Models;
 using System.Diagnostics;
 using AutoLot.Services.Logging;
 using AutoLot.Dal.Repos.Interfaces;
+using Microsoft.Extensions.Options;
+using AutoLot.MVC.Models;
 
 namespace MVC.Controllers
 {
@@ -20,10 +22,10 @@ namespace MVC.Controllers
         [Route("/[controller]")]
         [Route("/[controller]/[action]")]
         [HttpGet]
-        public IActionResult Index()
+        public IActionResult Index([FromServices] IOptionsMonitor<DealerInfo> dealerMonitor)
         {
-            _logger.LogAppWarning("This is a test");
-            return View();
+            var vm = dealerMonitor.CurrentValue;
+            return View(vm);
         }
 
         public IActionResult Privacy()
